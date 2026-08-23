@@ -1,4 +1,4 @@
-class Main{
+class DayNumberCount{
 	
 	public static void main(String[] args){
 

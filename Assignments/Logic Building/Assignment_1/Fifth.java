@@ -5,6 +5,6 @@ class Fifth {
 
         int area = side*side;
 	
-	    System.out.println(area);
+	System.out.println(area);
     }
 }

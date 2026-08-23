@@ -1,4 +1,4 @@
-class Main{
+class AvgMarks{
 	
 	public static void main(String[] args){
 		int maths = 80;

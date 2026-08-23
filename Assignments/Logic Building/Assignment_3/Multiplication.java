@@ -5,7 +5,7 @@ class Multiplication{
 	static void printMultiplicationTable(){
 
 		Scanner scanner = new Scanner(System.in);
-		System.out.println("Enter no.: ");
+		System.out.print("Enter no.: ");
 		int num = scanner.nextInt();
 	
 		for(int i=1; i<=10; i++){

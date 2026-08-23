@@ -1,5 +1,5 @@
 import java.util.Scanner;
-class Main{
+class UserProgram{
 	byte a;
     	short b;
     	int c;

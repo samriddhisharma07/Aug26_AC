@@ -1,5 +1,5 @@
 import java.util.Scanner;
-class Main{
+class NumMultiple{
 
 	public static void main(String[] args){
 		Scanner scanner = new Scanner(System.in);
