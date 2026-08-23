@@ -2,10 +2,10 @@ class Sixth {
     public static void main(String[] args) {
 
         int length = 10;
-	int breadth = 12;
+	    int breadth = 12;
 
         int area = length*breadth;
 	
-	System.out.println(area);
+	    System.out.println(area);
     }
 }
