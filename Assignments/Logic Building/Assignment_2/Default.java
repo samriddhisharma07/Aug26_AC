@@ -9,7 +9,7 @@ class Default {
     boolean h; 
 
     public static void main(String[] args) { 
-        Default obj = new Default(); // Changed Main to Default
+        Default obj = new Default(); 
         System.out.println("byte: " + obj.a); 
         System.out.println("short: " + obj.b); 
         System.out.println("int: " + obj.c); 
