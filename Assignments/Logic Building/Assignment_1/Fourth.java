@@ -6,9 +6,9 @@ class Fourth {
         if (time >= 5 && time <= 12) {
             System.out.println("Good Morning");
         }
-	else {
-	    System.out.println("Not morning time"); 
-	}
+	    else {
+	        System.out.println("Not morning time"); 
+	    }
 
     }
 }
