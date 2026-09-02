@@ -44,12 +44,8 @@ int main(int argc , char* argv[]){
     }
     cout<<"Results : Normal:"<<ncount<<"  Warning:"<<wcount<<"  Critical:"<<ccount<<"  Shutdown:"<<scount;
     
+    return 0 ;
     
-    
-
-
-
-
 
 
 }
