@@ -21,13 +21,13 @@ public class ComplexNumber {
     }
     public static void main(String[] args) {
         ComplexNumber[] arr = new ComplexNumber[5];
-        for(int i = 0; i < 5; i++) {
-            arr[i] = new ComplexNumber();
-            arr[i].setNumber1(i + 1);
-            arr[i].setNumber2(i + 2);
+        for(int tmp = 0; tmp < 5; tmp++) {
+            arr[tmp] = new ComplexNumber();
+            arr[tmp].setNumber1(tmp + 1);
+            arr[tmp].setNumber2(tmp + 2);
         }
-        for(int i = 0; i < 5; i++) {
-            System.out.println(arr[i].computeComplexNumber());
+        for(int tmp = 0; tmp < 5; tmp++) {
+            System.out.println(arr[tmp].computeComplexNumber());
         }
     }
 }
