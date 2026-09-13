@@ -60,14 +60,14 @@ public class Program {
 	}
 	
 	public static void main(String[] args) {
-//		oddPrint();
-//		evenPrint();
-//		seventhNumber();
-//		pattern();
-//		revPattern();
-//		numPattern();
-//		numPattern2();
-//		numPattern3();
+		oddPrint();
+		evenPrint();
+		seventhNumber();
+		pattern();
+		revPattern();
+		numPattern();
+		numPattern2();
+		numPattern3();
 		}
 	
 }
