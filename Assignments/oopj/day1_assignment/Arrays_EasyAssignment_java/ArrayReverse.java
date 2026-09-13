@@ -6,15 +6,15 @@ public class ArrayReverse {
 
         int[] arr = {5, 2, 8, 1, 3};
 
-        for(int i = 0; i < arr.length / 2; i++) {
+        for(int tmp = 0; tmp < arr.length / 2; tmp++) {
 
-            int temp = arr[i];
-            arr[i] = arr[arr.length - 1 - i];
-            arr[arr.length - 1 - i] = temp;
+            int temp = arr[tmp];
+            arr[tmp] = arr[arr.length - 1 - tmp];
+            arr[arr.length - 1 - tmp] = temp;
         }
 
-        for(int i = 0; i < arr.length; i++) {
-            System.out.print(arr[i] + " ");
+        for(int tmp = 0; tmp < arr.length; tmp++) {
+            System.out.print(arr[tmp] + " ");
         }
     }
 }
