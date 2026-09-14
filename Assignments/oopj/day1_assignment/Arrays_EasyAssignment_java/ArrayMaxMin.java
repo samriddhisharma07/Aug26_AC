@@ -9,14 +9,14 @@ public class ArrayMaxMin {
         int max = arr[0];
         int min = arr[0];
 
-        for(int i = 1; i < arr.length; i++) {
+        for(int tmp = 1; tmp < arr.length; tmp++) {
 
-            if(arr[i] > max) {
-                max = arr[i];
+            if(arr[tmp] > max) {
+                max = arr[tmp];
             }
 
-            if(arr[i] < min) {
-                min = arr[i];
+            if(arr[tmp] < min) {
+                min = arr[tmp];
             }
         }
 

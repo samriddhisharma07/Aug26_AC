@@ -6,12 +6,12 @@ public class ArrayDuplicate {
 
         int[] arr = {5, 2, 8, 2, 3, 5};
 
-        for(int i = 0; i < arr.length; i++) {
+        for(int tmp = 0; tmp < arr.length; tmp++) {
 
-            for(int j = i + 1; j < arr.length; j++) {
+            for(int jTmp = i + 1; jTmp < arr.length; jTmp++) {
 
-                if(arr[i] == arr[j]) {
-                    System.out.println("Duplicate = " + arr[i]);
+                if(arr[tmp] == arr[jTmp]) {
+                    System.out.println("Duplicate = " + arr[tmp]);
                 }
             }
         }
