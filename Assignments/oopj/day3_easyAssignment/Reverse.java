@@ -7,8 +7,8 @@ public class Reverse {
         System.out.println("The given string is: " + data);
         System.out.println("The string in reverse order is:");
 
-        for(int i = data.length() - 1; i >= 0; i--) {
-            System.out.print(data.charAt(i));
+        for(int tmp = data.length() - 1; tmp >= 0; tmp--) {
+            System.out.print(data.charAt(tmp));
         }
     }
 }
