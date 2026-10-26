@@ -1,0 +1,96 @@
+<html>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contact | Samriddhi Sharma</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <header id="site-header">
+    <a class="brand" href="index.html">
+      <img src="images/logo.svg" alt="Site logo" width="40" height="40">
+      <span>Samriddhi Sharma</span>
+    </a>
+    <nav>
+      <ul id="main-nav">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="projects.html">Projects</a></li>
+        <li><a href="contact.html" class="active">Contact</a></li>
+        <li><a href="index.html#about-me">About</a></li>
+        <!-- later: dark mode toggle button here -->
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <h1>Contact me</h1>
+    <p>Fill in the form and I will reply within a few days.</p>
+
+    <form id="contact-form" action="https://example.com/contact" method="post" enctype="multipart/form-data">
+
+      <div class="form-row">
+        <label for="full-name">Full name</label>
+        <input type="text" id="full-name" name="full-name" placeholder="Your
+ full name" required>
+      </div>
+
+      <div class="form-row">
+        <label for="email">Email</label>
+        <input type="email" id="email" name="email" placeholder="you@example.com" required>
+      </div>
+
+      <div class="form-row">
+        <label for="contact-date">Preferred contact date</label>
+        <input type="date" id="contact-date" name="contact-date">
+      </div>
+
+      <div class="form-row">
+        <label for="enquiry-type">Enquiry type</label>
+        <select id="enquiry-type" name="enquiry-type">
+          <option value="internship">Internship</option>
+          <option value="job">Job opportunity</option>
+          <option value="collaboration">Project collaboration</option>
+          <option value="other">Other</option>
+        </select>
+      </div>
+
+      <div class="form-row" id="contact-mode-group">
+        <label>Preferred contact mode</label>
+        <input type="radio" id="mode-email" name="contact-mode" value="email" checked>
+        <label class="inline-label" for="mode-email">Email</label>
+        <input type="radio" id="mode-phone" name="contact-mode" value="phone">
+        <label class="inline-label" for="mode-phone">Phone</label>
+        <input type="radio" id="mode-video" name="contact-mode" value="video">
+        <label class="inline-label" for="mode-video">Video call</label>
+      </div>
+
+      <div class="form-row">
+        <label for="message">Message</label>
+        <textarea id="message" name="message" rows="5" placeholder="How can I help you?"></textarea>
+      </div>
+
+      <div class="form-row">
+        <label for="cv-upload">Upload your CV</label>
+        <input type="file" id="cv-upload" name="cv-upload">
+      </div>
+
+      <div class="form-row">
+        <input type="checkbox" id="consent" name="consent" value="yes" required>
+        <label class="inline-label" for="consent">I agree to be contacted about this enquiry.</label>
+      </div>
+
+      <button type="submit" class="btn" id="submit-btn">Submit</button>
+      <button type="reset" class="btn" id="reset-btn">Reset</button>
+    </form>
+
+    <div id="map-box">
+      <h2>Find me here</h2>
+      <iframe id="location-map" title="Map of my city" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d14879.996714063884!2d81.35197825488814!3d21.19219159342586!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3a292317dc6c74b7%3A0xec295e14981e05bd!2sSector%204%2C%20Bhilai%2C%20Chhattisgarh!5e0!3m2!1sen!2sin!4v1793007652725!5m2!1sen!2sin" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="strict-origin-when-cross-origin"></iframe>
+    </div>
+  </main>
+
+  <footer id="site-footer">
+    <p>&copy; 2026 Samriddhi Sharma. Built with HTML and CSS.</p>
+  </footer>
+</body>
+</html>

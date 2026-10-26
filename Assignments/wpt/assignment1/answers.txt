@@ -1,0 +1,108 @@
+Part A: Written Questions
+
+1. Client–Server Architecture
+
+When a user opens my portfolio link, the browser sends an HTTP request to the server. The server sends back HTML, CSS and JavaScript files. The browser displays the website. If data is needed, the app logic processes the request and communicates with the database.
+
+Client (Browser)
+       |
+   HTTP Request
+       v
+     Server
+   (App Logic)
+       |
+       v
+    Database
+       |
+       v
+ HTTP Response
+       |
+       v
+Client (Browser)
+
+
+2. GET vs POST
+
+A contact form should use POST because it sends the message in the request body. If the method is not specified, the default method is GET. A successful response commonly returns status code 200. Server errors belong to the 5xx family, such as 500.
+
+
+3. Types of CSS
+
+- Inline CSS: Written inside an HTML element using the style attribute.
+- Internal CSS: Written inside the <style> tag in the HTML file.
+- External CSS: Written in a separate .css file.
+
+If all three have equal importance, inline CSS generally wins over internal and external CSS. External CSS is best for four pages because one stylesheet can be shared by all pages.
+
+
+4. CSS Specificity
+
+For <p id="intro" class="note">Hello</p>, the #intro rule wins if all rules set the same property and no !important or other special priority changes the result.
+
+Order from strongest to weakest:
+1. !important
+2. Inline style
+3. ID selector (#intro)
+4. Class selector (.note)
+5. Element selector (p)
+6. Universal selector (*)
+
+
+5. Padding, Margin and Box Model
+
+- Content: The actual text or item inside an element.
+- Padding: Space between content and border.
+- Border: Line around the padding and content.
+- Margin: Space outside the border.
+
++-------------------------+
+|         Margin          |
+|  +-------------------+  |
+|  |      Border       |  |
+|  |  +-------------+  |  |
+|  |  |   Padding   |  |  |
+|  |  |  +-------+  |  |  |
+|  |  |  |Content|  |  |  |
+|  |  |  +-------+  |  |  |
+|  |  +-------------+  |  |
+|  +-------------------+  |
++-------------------------+
+
+box-sizing: border-box makes the declared width and height include the content, padding and border.
+
+
+6. JavaScript and JS Engine
+
+JavaScript runs in environments such as a web browser. A JavaScript engine executes JavaScript code; for example, Chrome uses V8. A separate manual compilation step is not needed because the engine handles the code, often using interpretation and just-in-time compilation.
+
+JavaScript can:
+- Validate form input.
+- Change webpage content dynamically.
+
+
+7. JavaScript Type Safety
+
+JavaScript is dynamically typed, so a variable can hold different types of values. Writing a = "hello"; assigns a string to a, but without declaring a using let, const or var, it may create a global variable in non-strict mode. In strict mode, it causes an error.
+
+Three data types are:
+- Number
+- String
+- Boolean
+
+
+8. CSS Position Property
+
+- static: Default position; elements follow the normal page flow.
+- relative: Moves an element relative to its normal position.
+- absolute: Positions an element relative to its nearest positioned ancestor.
+- fixed: Positions an element relative to the browser viewport and keeps it in place while scrolling.
+
+top, left, right and bottom specify offsets for positioned elements.
+
+
+9. Flexbox
+
+With display: flex and flex values 1, 2 and 1, the available space is shared in the ratio 1:2:1. The second box gets twice the space of either other box, assuming no other sizing constraints.
+
+- gap: Adds space between the boxes.
+- justify-content: center: Centers the boxes along the main axis of the flex container.
