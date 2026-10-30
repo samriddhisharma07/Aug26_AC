@@ -1,0 +1,396 @@
+
+<html>
+<head>
+    <title>Tim Bakery Shop</title>
+    <link rel="stylesheet" href="landing.css">
+
+    <style>
+        h1 {
+            text-transform: uppercase;
+        }
+
+        #orderbox {
+            background-color: white;
+            padding: 20px;
+            margin: 20px;
+            border: 2px solid brown;
+            border-radius: 10px;
+        }
+
+        #orderbox input, #orderbox select, #orderbox button {
+            padding: 8px;
+            margin: 8px;
+        }
+
+        #offer {
+            color: red;
+            font-weight: bold;
+        }
+
+        #error {
+            color: red;
+        }
+
+        #result {
+            color: green;
+            font-weight: bold;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div id="banner">
+        <img src="images/bakery.jpg" width="100%" height="250">
+        <h1 style="color: white;">Tim Bakery Shop</h1>
+        <p>Freshly Baked, Made with Love!</p>
+    </div>
+
+    <div class="info">
+        <p>
+            Welcome to Tim Bakery Shop! We offer
+            freshly baked cakes, pastries and breads
+            made with love and quality ingredients.
+        </p>
+    </div>
+
+    <h2>Our Cakes</h2>
+
+    <div id="cake">
+        <div class="item-card">
+            <img src="images/cake1.jpg">
+            <h3>Strawberry Cake</h3>
+            <p class="price">₹450</p>
+        </div>
+
+        <div class="item-card">
+            <img src="images/cake2.avif">
+            <h3>Chocolate Drip Fruit Cake</h3>
+            <p class="price">₹550</p>
+        </div>
+
+        <div class="item-card">
+            <img src="images/cake3.avif">
+            <h3>Caramel Cake</h3>
+            <p class="price">₹400</p>
+        </div>
+
+        <div class="item-card">
+            <img src="images/cake4.avif">
+            <h3>Blueberry Cake</h3>
+            <p class="price">₹500</p>
+        </div>
+
+        <div class="item-card">
+            <img src="images/cake5.avif">
+            <h3>Fruit Cake</h3>
+            <p class="price">₹350</p>
+        </div>
+    </div>
+
+    <h2>Our Pastries</h2>
+
+    <div id="pastry">
+        <div class="item-card">
+            <img src="images/pastry1.avif">
+            <h3>White Chocolate Pastry</h3>
+            <p class="price">₹90</p>
+        </div>
+
+        <div class="item-card">
+            <img src="images/pastry2.avif">
+            <h3>Chocolate Pastry</h3>
+            <p class="price">₹80</p>
+        </div>
+
+        <div class="item-card">
+            <img src="images/pastry3.avif">
+            <h3>Vanilla Pastry</h3>
+            <p class="price">₹70</p>
+        </div>
+
+        <div class="item-card">
+            <img src="images/pastry4.avif">
+            <h3>Mousse Pastry</h3>
+            <p class="price">₹100</p>
+        </div>
+
+        <div class="item-card">
+            <img src="images/pastry5.avif">
+            <h3>Berry Cream Pastry</h3>
+            <p class="price">₹90</p>
+        </div>
+    </div>
+
+    <h2>Our Breads</h2>
+
+    <div id="bread">
+        <div class="item-card">
+            <img src="images/White bread.avif">
+            <h3>White Bread</h3>
+            <p class="price">₹40</p>
+        </div>
+
+        <div class="item-card">
+            <img src="images/Brown bread.avif">
+            <h3>Brown Bread</h3>
+            <p class="price">₹50</p>
+        </div>
+
+        <div class="item-card">
+            <img src="images/Whole Grain bread.avif">
+            <h3>Whole Grain Bread</h3>
+            <p class="price">₹60</p>
+        </div>
+
+        <div class="item-card">
+            <img src="images/Bun bread.avif">
+            <h3>Bun Bread</h3>
+            <p class="price">₹30</p>
+        </div>
+
+        <div class="item-card">
+            <img src="images/Seed Sliced bread.jpg">
+            <h3>Seed Sliced Bread</h3>
+            <p class="price">₹65</p>
+        </div>
+    </div>
+
+    <div class="info">
+        <h2>How to Order</h2>
+        <ol>
+            <li>Choose your favourite bakery item.</li>
+            <li>Check its price.</li>
+            <li>Visit our shop or contact us to place your order.</li>
+        </ol>
+    </div>
+
+    <div class="info">
+        <h2>Opening Hours</h2>
+        <ul>
+            <li>Monday - Friday: 9 AM - 9 PM</li>
+            <li>Saturday: 10 AM - 10 PM</li>
+            <li>Sunday: 10 AM - 6 PM</li>
+        </ul>
+    </div>
+
+    <div id="orderbox">
+        <h2>Order Calculator</h2>
+
+        <p id="offer"></p>
+
+        <label>Select Item:</label>
+        <select id="item"></select>
+
+        <label>Quantity:</label>
+        <input type="number" id="quantity" value="1" min="1">
+
+        <button type="button" onclick="addOrder()">Add to Order</button>
+
+        <p id="error"></p>
+
+        <h3>Your Order</h3>
+        <ul id="orderlist"></ul>
+
+        <p id="itemcount">Total Items: 0</p>
+
+        <label>Delivery Area:</label>
+        <select id="area" onchange="showBill()">
+            <option value="local">Local - ₹30</option>
+            <option value="nearby">Nearby - ₹60</option>
+            <option value="far">Far - ₹100</option>
+        </select>
+
+        <h3 id="bill">Total Bill: ₹0</h3>
+
+        <button type="button" onclick="placeOrder()">Place Order</button>
+
+        <p id="result"></p>
+    </div>
+
+    <div class="info">
+        <h2>Explore More</h2>
+        <p>Discover delicious baking ideas.</p>
+        <a href="https://www.bbcgoodfood.com/" target="_blank">
+            Visit BBC Good Food
+        </a>
+    </div>
+
+    <script>
+        let menu = [
+            {id: 1, name: "Strawberry Cake", price: 450},
+            {id: 2, name: "Chocolate Drip Fruit Cake", price: 550},
+            {id: 3, name: "Caramel Cake", price: 400},
+            {id: 4, name: "Blueberry Cake", price: 500},
+            {id: 5, name: "Fruit Cake", price: 350},
+            {id: 6, name: "White Chocolate Pastry", price: 90},
+            {id: 7, name: "Chocolate Pastry", price: 80},
+            {id: 8, name: "Vanilla Pastry", price: 70},
+            {id: 9, name: "Mousse Pastry", price: 100},
+            {id: 10, name: "Berry Cream Pastry", price: 90},
+            {id: 11, name: "White Bread", price: 40},
+            {id: 12, name: "Brown Bread", price: 50},
+            {id: 13, name: "Whole Grain Bread", price: 60},
+            {id: 14, name: "Bun Bread", price: 30},
+            {id: 15, name: "Seed Sliced Bread", price: 65}
+        ];
+
+        let cart = [];
+        let count = 1;
+
+        let dropdown = document.getElementById("item");
+
+        menu.forEach(function(product) {
+            let option = document.createElement("option");
+            option.value = product.id;
+            option.innerHTML = product.name + " - ₹" + product.price;
+            dropdown.appendChild(option);
+        });
+
+        function addOrder() {
+            let id = parseInt(document.getElementById("item").value);
+            let quantity = Number(document.getElementById("quantity").value);
+
+            if (!Number.isInteger(quantity) || quantity <= 0) {
+                document.getElementById("error").innerHTML =
+                    "Please enter a valid quantity.";
+                return;
+            }
+
+            document.getElementById("error").innerHTML = "";
+
+            let product = menu.find(function(item) {
+                return item.id === id;
+            });
+
+            let order = {
+                id: product.id,
+                name: product.name,
+                price: product.price,
+                quantity: quantity,
+                lineId: count
+            };
+
+            count++;
+            cart.push(order);
+
+            document.getElementById("quantity").value = 1;
+
+            showOrders();
+            showBill();
+        }
+
+        function showOrders() {
+            let list = document.getElementById("orderlist");
+            list.innerHTML = "";
+
+            cart.forEach(function(order) {
+                let li = document.createElement("li");
+
+                li.innerHTML = order.name + " x " + order.quantity +
+                    " = ₹" + (order.price * order.quantity) + " ";
+
+                let btn = document.createElement("button");
+                btn.innerHTML = "Remove";
+
+                btn.onclick = function() {
+                    cart = cart.filter(function(item) {
+                        return item.lineId !== order.lineId;
+                    });
+
+                    showOrders();
+                    showBill();
+                };
+
+                li.appendChild(btn);
+                list.appendChild(li);
+            });
+        }
+
+        function applyRule(amount, rule) {
+            return rule(amount);
+        }
+
+        function showBill() {
+            let subtotal = cart.reduce(function(total, order) {
+                return total + order.price * order.quantity;
+            }, 0);
+
+            let totalItems = cart.reduce(function(total, order) {
+                return total + order.quantity;
+            }, 0);
+
+            let itemText = totalItems === 1 ? "item" : "items";
+
+            document.getElementById("itemcount").innerHTML =
+                "Total Items: " + totalItems + " " + itemText;
+
+            let area = document.getElementById("area").value;
+            let delivery = 30;
+
+            if (area === "nearby") {
+                delivery = 60;
+            } else if (area === "far") {
+                delivery = 100;
+            }
+
+            let discount = 0;
+
+            if (subtotal >= 2000) {
+                discount = applyRule(subtotal, function(amount) {
+                    return amount * 0.15;
+                });
+            } else if (subtotal >= 1000) {
+                discount = applyRule(subtotal, function(amount) {
+                    return amount * 0.10;
+                });
+            } else if (subtotal >= 500) {
+                discount = applyRule(subtotal, function(amount) {
+                    return amount * 0.05;
+                });
+            }
+
+            let total = subtotal - discount + delivery;
+
+            document.getElementById("bill").innerHTML =
+                "Subtotal: ₹" + subtotal +
+                "<br>Discount: ₹" + discount.toFixed(2) +
+                "<br>Delivery Charge: ₹" + delivery +
+                "<br>Total Bill: ₹" + total.toFixed(2);
+        }
+
+        function makeOrder() {
+            return new Promise(function(resolve, reject) {
+                setTimeout(function() {
+                    if (cart.length === 0) {
+                        reject("Please add an item to your order first.");
+                    } else {
+                        resolve("Order placed successfully! Order Number: " +
+                            Math.floor(Math.random() * 10000));
+                    }
+                }, 2000);
+            });
+        }
+
+        async function placeOrder() {
+            document.getElementById("result").innerHTML =
+                "Placing your order...";
+
+            try {
+                let message = await makeOrder();
+                document.getElementById("result").innerHTML = message;
+            } catch (error) {
+                document.getElementById("result").innerHTML = error;
+            }
+        }
+
+        setTimeout(function() {
+            document.getElementById("offer").innerHTML =
+                "Special Offer: Get 15% off on orders above ₹2000!";
+        }, 3000);
+
+        showBill();
+    </script>
+
+</body>
+</html>

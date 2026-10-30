@@ -1,32 +1,73 @@
+
 <html>
-  <head>
+<head>
     <title>Login Page</title>
-    <nav id="main-nav">
-    <a href="login.html">Login</a>
-    <a href="directory.html">Directory</a>
-    <a href="onboarding.html">Onboarding</a>
-    </nav>
     <link rel="stylesheet" href="style.css">
-    
-  </head>
-  <body id="loginid">
-    <div>
-      <div id="login-head">Login</div>
-      <form id="login-form">
-        <div id="name-id">
-          <label>Enter Username</label><br />
-          <input type="text" placeholder="enter username" class="form-input" />
+</head>
+
+<body id="loginid">
+
+    <nav id="main-nav">
+        <a href="login.html">Login</a>
+        <a href="directory.html">Directory</a>
+        <a href="onboarding.html">Onboarding</a>
+    </nav>
+
+    <form id="formid" onsubmit="return validate()">
+
+        <h2 style="text-align: center;">Login</h2>
+
+        <label>Username</label><br>
+        <input type="text" id="username" class="form-input" placeholder="Enter username">
+        <span id="username-error" class="error-span" style="color: red;"></span><br>
+
+        <label>Password</label>
+        <div id="password-box">
+        <input type="password" id="pswd" class="form-input" placeholder="Enter password">
+        <span id="password-error" class="error-span" style="color: red;"></span>
+        <button type="button" onclick="show()" id="btn">Show</button>
         </div>
-        <div>
-          <label>Enter Password</label><br />
-          <input
-            type="password"
-            placeholder="enter password"
-            class="form-input"
-          />
-        </div>
-        <button type="submit" id="button-id">Login</button>
-      </form>
-    </div>
-  </body>
+        <span id="password-error" class="error-span" style="color: red;"></span>
+
+        <button type="submit" id="button-id" id="button">Login</button>
+
+    </form>
+
+    <script>
+        function show() {
+            let pswd = document.getElementById("pswd");
+            let btn = document.getElementById("btn");
+
+            if (pswd.type === "password") {
+                pswd.type = "text";
+                btn.innerHTML = "Hide";
+            } else {
+                pswd.type = "password";
+                btn.innerHTML = "Show";
+            }
+        }
+
+        function validate() {
+            let username = document.getElementById("username").value;
+            let password = document.getElementById("pswd").value;
+            let valid = true;
+
+            document.getElementById("username-error").innerHTML = "";
+            document.getElementById("password-error").innerHTML = "";
+
+            if (username === "") {
+                document.getElementById("username-error").innerHTML = "Username is required";
+                valid = false;
+            }
+
+            if (password === "") {
+                document.getElementById("password-error").innerHTML = "Password is required";
+                valid = false;
+            }
+
+            return valid;
+        }
+    </script>
+
+</body>
 </html>

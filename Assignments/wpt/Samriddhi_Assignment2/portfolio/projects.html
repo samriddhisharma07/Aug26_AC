@@ -1,0 +1,60 @@
+<html>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Projects | Samriddhi Sharma</title>
+  <link rel="stylesheet" href="style.css">
+  
+
+</head>
+<body>
+  <header id="site-header">
+    <a class="brand" href="index.html">
+      <img src="images/logo.svg" alt="Site logo" width="40" height="40">
+      <span>Samriddhi Sharma</span>
+    </a>
+    <nav>
+      <ul id="main-nav">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="projects.html" class="active">Projects</a></li>
+        <li><a href="contact.html">Contact</a></li>
+        <li><a href="index.html#about-me">About</a></li>
+        
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <h1>Projects</h1>
+    <p id="projects-intro">These are course exercises and practice projects. Each one is labelled honestly as such.</p>
+
+    <div class="project-controls">
+      <input type="text" id="project-search" placeholder="Search by project title" onkeyup="filterProjects()">
+      <select id="tech-filter" onchange="filterProjects()"><option value="all">All technologies</option></select>
+    </div>
+    <p id="project-count">Loading projects...</p>
+    <p id="project-error" class="error-span"></p>
+    <div class="table-wrap">
+      <table id="project-table">
+        <thead>
+          <tr>
+            <th>Title</th>
+            <th>Tech used</th>
+            <th>Description</th>
+            <th>Link</th>
+          </tr>
+        </thead>
+        <tbody id="project-body"></tbody>
+      </table>
+    </div>
+
+    <h2>Top two projects</h2>
+    <div class="project-cards" id="top-projects"></div>
+  </main>
+
+  <footer id="site-footer">
+    <p>&copy; 2026 Samriddhi Sharma. Built with HTML and CSS.</p>
+  </footer>
+  <script src="js/projects.js"></script>
+</body>
+</html>

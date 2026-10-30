@@ -1,0 +1,69 @@
+
+<html>
+<head>
+    <title>Directory Page</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body id="directoryid">
+    <nav id="main-nav">
+        <a href="login.html">Login</a>
+        <a href="directory.html">Directory</a>
+        <a href="onboarding.html">Onboarding</a>
+    </nav>
+
+    <h2 style="text-align:center;">Employee Directory</h2>
+
+    <table border="1" cellspacing="0" cellpadding="5" id="tableid">
+        <thead>
+            <tr>
+                <th colspan="6">Employee Table</th>
+            </tr>
+            <tr>
+                <th>Emp ID</th>
+                <th>Name</th>
+                <th>Department</th>
+                <th>Email</th>
+                <th>Phone</th>
+                <th>Action</th>
+            </tr>
+        </thead>
+
+        <tbody id="tbodyid"></tbody>
+    </table>
+
+    <p id="pid" style="text-align:center;"></p>
+    <p id="errorid" style="text-align:center; color:red;"></p>
+
+    <div style="text-align:center; margin:15px;">
+        <button onclick="load()">Load employees</button>
+    </div>
+
+    <hr>
+
+    <h3 style="text-align:center;">Search Employee</h3>
+
+    <div style="text-align:center;">
+        <select id="field">
+            <option value="name">Name</option>
+            <option value="email">Email</option>
+            <option value="username">Username</option>
+        </select>
+
+        <input type="text" id="searchbox" placeholder="Search employee"
+               onkeyup="searchEmployee()">
+    </div>
+
+    <hr>
+
+    <h3 style="text-align:center;">Add Employee</h3>
+
+    <form id="addform" style="text-align:center;">
+        <input type="text" id="empname" placeholder="Enter name" required>
+        <input type="text" id="department" placeholder="Enter department" required>
+        <button type="submit">Add Employee</button>
+    </form>
+
+    <script src="js/directory.js"></script>
+</body>
+</html>

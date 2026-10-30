@@ -1,0 +1,23 @@
+1. var is function-scoped and can be redeclared. let is block-scoped and cannot be redeclared in the same scope. const is block-scoped and must be initialized; its binding cannot be reassigned. var declarations are hoisted and initialized as undefined. let and const are hoisted but cannot be used before initialization.
+
+2. typeof 4 is "number"; typeof "hello" is "string"; typeof true is "boolean"; typeof null is "object" (a historical JavaScript quirk); typeof undefined is "undefined". JavaScript is dynamically typed because a variable can hold values of different types at different times.
+
+3. == compares values after type conversion, while === compares value and type without conversion. || uses the right side for any falsy left value. ?? uses the right side only when the left value is null or undefined. Use ?? when 0 is a valid input.
+
+4. const student = {id: 1, name: "Riya", phones: ["1111111111", "2222222222"], address: {street: "Park Road", city: "Bhilai"}}; Second phone: student.phones[1]; city: student.address.city. student?.address?.city safely returns undefined if address is missing.
+
+5. (a) arr.filter(n => n % 2 === 0) (b) arr.map(n => n * 2) (c) arr.reduce((sum, n) => sum + n, 0)
+
+6. A callback is a function passed to another function to be called later. const add = (x, y) => x + y;
+
+7. Output: A, C, B. The normal statements run first. setTimeout schedules B to run later, after the timer completes.
+
+8. Callback hell is deeply nested callbacks that are difficult to read and maintain. Promises provide a clearer chain with then() and catch(). The states are pending, fulfilled and rejected.
+
+9. async function showSum() { try { const result = await sum(2, 3); console.log(result); } catch (error) { console.log(error); } } The async keyword allows the function to use await and makes it return a promise.
+
+10. The DOM is the browser's object representation of an HTML page. Use document.getElementById("id") to find an element. innerHTML reads or changes HTML content inside an element; value reads or changes a form control's entered value.
+
+11. fetch(url) returns a Promise that resolves to a Response object. The first await waits for the response; the second await on response.json() waits for the body to be parsed. response.status gives the HTTP status code, such as 200 or 404.
+
+12. A regular expression is a pattern used to check text. It can test several rules, such as uppercase, lowercase, digit and special character, in one expression instead of many separate if statements.

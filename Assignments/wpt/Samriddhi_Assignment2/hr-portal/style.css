@@ -1,0 +1,179 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    color: #333;
+    line-height: 1.5;
+}
+
+#main-nav {
+    display: flex;
+    justify-content: center;
+    gap: 25px;
+    padding: 16px;
+    background: #343434;
+}
+
+#main-nav a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+#main-nav a:hover {
+    color: #ffd18b;
+}
+
+#loginid {
+    min-height: 100vh;
+    background: linear-gradient(#FF8A65, #F06292, #F48FB1);
+}
+
+#login-box {
+    width: 400px;
+    min-height: 300px;
+    margin: 35px auto;
+    background: white;
+    border: 2px solid #333;
+    border-radius: 10px;
+    text-align: center;
+    padding: 20px;
+}
+
+#login-head {
+    font-weight: bold;
+    font-size: 22px;
+    margin-bottom: 20px;
+}
+
+#name-id {
+    margin-top: 10px;
+}
+
+.form-input {
+    margin-bottom: 15px;
+    width: 160px;
+    padding: 8px;
+    border: 0;
+    border-bottom: 1px solid #555;
+    outline: none;
+}
+
+#button-id {
+    width: 100px;
+    padding: 9px;
+    margin-top: 10px;
+    background: #F06292;
+    color: white;
+    border: 0;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+#button-id:hover {
+    background: #d94d7e;
+}
+
+#btn-show {
+    padding: 6px 10px;
+    background: #F06292;
+    color: white;
+    border: 0;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+#error, #error1 {
+    display: block;
+    color: red;
+    font-size: 13px;
+}
+#onboardingid {
+    background: #f4f6f9;
+    min-height: 100vh;
+    padding: 20px;
+}
+
+#pageid {
+    background: white;
+    width: min(92%, 580px);
+    margin: 15px auto;
+    padding: 20px;
+    border: 1px solid #ddd;
+    box-shadow: 0 4px 12px #0002;
+}
+
+#headid {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.formclass {
+    margin: 13px 0;
+}
+
+.formclass > label {
+    display: block;
+    margin-bottom: 6px;
+    font-weight: bold;
+}
+
+.inputclass,
+#pageid select,
+#pageid textarea {
+    width: 100%;
+    padding: 12px;
+    margin-bottom: 15px;
+    border: 1px solid #bbb;
+    border-radius: 5px;
+    font-size: 16px;
+}
+
+#pageid input[type="radio"],
+#pageid input[type="checkbox"],
+#pageid input[type="file"] {
+    width: auto;
+}
+
+.buttonclass {
+    padding: 10px 16px;
+    margin: 5px;
+    background: #365b88;
+    color: white;
+    border: 0;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.buttonclass:hover {
+    background: #263f60;
+}
+
+.btnrow {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.error {
+    display: block;
+    color: red;
+    font-size: 13px;
+}
+
+#status {
+    text-align: center;
+    margin: 15px;
+}
+
+#mapid {
+    text-align: center;
+    margin: 20px auto;
+}
+
+#mapid iframe {
+    max-width: 100%;
+}

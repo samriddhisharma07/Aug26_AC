@@ -46,6 +46,20 @@ body{
   border: 1px solid gray;
   padding: 8px;
   border-radius: 5px;
+
+}
+#username #pswd input{
+    width:100%;
+    border: 1px solid;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+#formid {
+    background-color: white;
+    height: 350px;
+    width:30%;
+    border-radius: 10%;
+    border: 2px dashed black;
 }
 #login-head {
   padding: 15px;
@@ -59,6 +73,22 @@ body{
 }
 #name-id {
   margin-top: 10px;
+}
+#password-box {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+#password-box .form-input {
+    margin-bottom: 0;
+}
+#username-error {
+    font-size: 12px;
+}
+#password-error {
+    font-size: 12px;
+    white-space: nowrap;
 }
 #button-id {
   width: 100px;

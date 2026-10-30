@@ -1,0 +1,51 @@
+<html>
+<head>
+    <title>Login Page</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body id="loginid">
+
+    <nav id="main-nav">
+        <a href="login.html">Login</a>
+        <a href="directory.html">Directory</a>
+        <a href="onboarding.html">Onboarding</a>
+    </nav>
+
+    <div id="login-box">
+
+        <div id="login-head">Login</div>
+
+        <form id="login-form" onsubmit="return validate()">
+
+            <div id="name-id">
+                <label>Enter Username</label><br>
+                <input type="text" placeholder="Enter username"
+                class="form-input" id="username"
+                onkeyup="validateUsername()">
+                <span id="error"></span>
+            </div>
+
+            <div>
+                <label>Enter Password</label><br>
+                <input type="password" placeholder="Enter password"
+                class="form-input" id="pswd"
+                onkeyup="validatePassword()">
+
+                <button type="button" id="btn-show" onclick="show()">Show</button>
+
+                <span id="error1"></span>
+            </div>
+
+            <button type="submit" id="button-id">Login</button>
+
+        </form>
+
+    </div>
+
+    <script src="js/login.js"></script>
+
+</body>
+</html>

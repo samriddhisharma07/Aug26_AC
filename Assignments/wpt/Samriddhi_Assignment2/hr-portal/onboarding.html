@@ -1,0 +1,163 @@
+<html>
+  <head>
+    <title>Onboarding Page</title>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+
+  <body id="onboardingid">
+    <nav id="main-nav">
+      <a href="login.html">Login</a>
+      <a href="directory.html">Directory</a>
+      <a href="onboarding.html">Onboarding</a>
+    </nav>
+
+    <div id="pageid">
+      <h2 id="headid">Onboarding Form</h2>
+
+      <form id="formid" onsubmit="return validateForm();">
+        <div class="formclass">
+          <label>Full name</label>
+          <input
+            type="text"
+            id="fullname"
+            placeholder="Enter full name"
+            class="inputclass"
+          />
+          <span id="nameerror" class="error"></span>
+        </div>
+
+        <div class="formclass">
+          <label>Official email</label>
+          <input
+            type="text"
+            id="email"
+            placeholder="Enter official email"
+            class="inputclass"
+          />
+          <span id="emailerror" class="error"></span>
+        </div>
+
+        <div class="formclass">
+          <label>Temporary password</label>
+          <input
+            type="password"
+            placeholder="Enter password"
+            class="inputclass"
+          />
+        </div>
+
+        <div class="formclass">
+          <label>Date of birth</label>
+          <input type="date" class="inputclass" />
+        </div>
+
+        <div class="formclass">
+          <label>Joining date</label>
+          <input type="date" class="inputclass" />
+        </div>
+
+        <div class="formclass">
+          <label>Orientation slot</label>
+          <input type="datetime-local" class="inputclass" />
+        </div>
+
+        <div class="formclass">
+          <label>Reporting time on day one</label>
+          <input type="time" class="inputclass" />
+        </div>
+
+        <div class="formclass">
+          <label>Gender</label>
+          <label><input type="radio" name="gender" value="male" /> Male</label>
+          <label
+            ><input type="radio" name="gender" value="female" /> Female</label
+          >
+          <label
+            ><input type="radio" name="gender" value="others" /> Others</label
+          >
+        </div>
+
+        <div class="formclass">
+          <label>Highest qualification</label>
+          <select id="qualification">
+            <option value="">Select qualification</option>
+            <option value="10">10th</option>
+            <option value="12">12th</option>
+            <option value="Graduation">Graduation</option>
+            <option value="Post Graduation">Post Graduation</option>
+          </select>
+          <span id="qualerror" class="error"></span>
+        </div>
+
+        <div class="formclass">
+          <label>Department</label>
+          <select id="department">
+            <option value="">Select department</option>
+            <option value="IT">IT</option>
+            <option value="CS">CS</option>
+            <option value="Civil">Civil</option>
+            <option value="Sales">Sales</option>
+            <option value="Mechanical">Mechanical</option>
+          </select>
+          <span id="deperror" class="error"></span>
+        </div>
+
+        <div class="formclass">
+          <label>Current address</label>
+          <textarea
+            placeholder="Enter current address"
+            class="inputclass"
+          ></textarea>
+        </div>
+
+        <div class="formclass">
+          <label>Passport Photo</label>
+          <input type="file" />
+        </div>
+
+        <div class="formclass">
+          <label>Resume</label>
+          <input type="file" />
+        </div>
+
+        <div class="formclass">
+          <label
+            >Accept terms and conditions
+            <input type="checkbox" />
+          </label>
+        </div>
+
+        <div class="formclass btnrow" style="margin: auto">
+          <button type="submit" class="buttonclass">Submit</button>
+          <button type="reset" class="buttonclass" onclick="clearStatus()">
+            Reset
+          </button>
+          <button
+            type="button"
+            class="buttonclass"
+            onclick="alert('Please fill the form and click Submit.')"
+          >
+            Need help?
+          </button>
+        </div>
+      </form>
+
+      <p id="status" style="text-align: center; margin: 15px"></p>
+
+      <div id="mapid">
+        <iframe
+          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d7722824.148337995!2d68.510475025!3d19.067684200000006!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3be7c7886888f8aed%3A0xec6febe2bd5935!2sTechNova%20Imaging%20Systems%20(P)%20Limited!5e0!3m2!1sen!2sin!4v1792841507202!5m2!1sen!2sin"
+          width="500"
+          height="350"
+          style="border: 1px solid"
+          loading="lazy"
+        >
+        </iframe>
+      </div>
+    </div>
+
+    <script src="js/onboarding.js"></script>
+  </body>
+</html>
